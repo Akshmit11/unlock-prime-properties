@@ -4,15 +4,7 @@ export const headerLinks = [
       route: '/',
     },
     {
-      label: 'For Rent',
-      route: '/rent',
-    },
-    {
       label: 'Agent Finder',
       route: '/find-agents',
-    },
-    {
-      label: 'Generate Floor Plan',
-      route: '/generate-floor-plan',
     },
   ]
