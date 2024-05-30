@@ -1,6 +1,7 @@
 import { Schema, model, models } from "mongoose";
 
 export interface ITransaction extends Document {
+  _id: string;
   user: {
     _id: string,
     firstName: string,

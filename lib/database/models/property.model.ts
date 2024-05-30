@@ -1,6 +1,7 @@
 import { Document, Schema, model, models } from "mongoose";
 
 export interface IProperty extends Document {
+  _id: string;
   user: {
     _id: string;
     firstName: string;
