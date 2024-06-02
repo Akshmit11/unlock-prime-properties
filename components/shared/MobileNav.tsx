@@ -32,7 +32,10 @@ const MobileNav = () => {
           <Separator className="border border-gray-50" />
           <ul className="space-y-4">
             {headerLinks.map((link) => {
-              const isActive = link.route === pathname;
+                const isActive =
+                (pathname === "/" && link.route === "/") ||
+                pathname === link.route ||
+                pathname?.startsWith(`${link.route}/`);
               return (
                 <li
                   key={link.route}
@@ -51,7 +54,7 @@ const MobileNav = () => {
           <Separator className="border border-gray-50" />
           <div className="md:hidden w-fit">
             <Button asChild className="flex md:hidden gap-2 text-black">
-              <Link href={"/"}>
+              <Link href={"/properties/create"}>
                 <Plus className="w-5 h-5" color="black" />
                 Post Your Property
               </Link>

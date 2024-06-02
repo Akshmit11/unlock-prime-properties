@@ -16,7 +16,7 @@ export interface IAgent extends Document {
   updatedAt: Date;
 }
 
-const AgentSchema = new Schema({
+const AgentSchema: Schema<IAgent> = new Schema({
   user: { type: Schema.Types.ObjectId, ref: "User", required: true },
   phone: { type: String, required: true },
   workingLocations: { type: [String], required: true },

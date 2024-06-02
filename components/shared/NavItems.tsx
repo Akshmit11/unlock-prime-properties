@@ -12,7 +12,10 @@ const NavItems = () => {
   return (
     <ul className="hidden lg:flex gap-10">
       {headerLinks.map((link) => {
-        const isActive = link.route === pathname;
+          const isActive =
+          (pathname === "/" && link.route === "/") ||
+          pathname === link.route ||
+          pathname?.startsWith(`${link.route}/`);
 
         return (
           <li key={link.route} className={`${isActive && "text-primary"}`}>

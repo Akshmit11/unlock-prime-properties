@@ -17,7 +17,7 @@ export interface ITransaction extends Document {
   updatedAt: Date;
 }
 
-const TransactionSchema = new Schema({
+const TransactionSchema: Schema<ITransaction> = new Schema({
   user: { type: Schema.Types.ObjectId, ref: "User", required: true },
   planBought: { type: String, required: true, enum: ["yes", "processing"] },
   planType: { type: String, required: true, enum: ["basic", "pro"] },

@@ -16,7 +16,7 @@ const Header = () => {
       </div>
       <div className="flex gap-2 items-center">
         <Button asChild className="hidden md:flex gap-2 text-black">
-          <Link href={"/"}>
+          <Link href={"/properties/create"}>
             <Plus className="w-5 h-5" color="black" />
             Post Your Property
           </Link>
