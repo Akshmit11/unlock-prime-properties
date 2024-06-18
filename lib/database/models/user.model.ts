@@ -8,8 +8,8 @@ export interface IUser extends Document {
   username: string;
   email: string;
   photo: string;
-  planBought: "yes" | "no" | "processing";
-  planType?: "basic" | "pro";
+  planBought: "yes" | "no";
+  planType?: "builder" | "agent";
   planStartDate?: Date;
   planEndDate?: Date;
   createdAt: Date;
@@ -23,13 +23,8 @@ const UserSchema: Schema<IUser> = new Schema({
   username: { type: String, required: true, unique: true, trim: true },
   email: { type: String, required: true, unique: true },
   photo: { type: String, required: true },
-  planBought: {
-    type: String,
-    required: true,
-    enum: ["yes", "no", "processing"],
-    default: "no"
-  },
-  planType: { type: String, enum: ["basic", "pro"], default: null },
+  planBought: { type: String, required: true, default: "no" },
+  planType: { type: String, default: null },
   planStartDate: { type: Date, default: null },
   planEndDate: { type: Date, default: null },
   createdAt: { type: Date, default: Date.now },

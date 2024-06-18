@@ -1,3 +1,4 @@
+import Footer from "@/components/shared/Footer";
 import Header from "@/components/shared/Header";
 
 export default function Layout({
@@ -8,9 +9,10 @@ export default function Layout({
     return (
       <main className="flex flex-col w-full min-h-screen max-w-7xl lg:mx-auto">
         <Header />
-        <div className="sm:p-6 sm:px-10 mt-24">
+        <div className="flex-1 px-5 sm:p-6 sm:px-10 mt-24">
           {children}
         </div>
+        <Footer />
       </main>
     );
   }

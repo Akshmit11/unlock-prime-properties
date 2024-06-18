@@ -18,7 +18,7 @@ const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
   return (
     <Select onValueChange={onChangeHandler}>
       <SelectTrigger className="w-full">
-        <SelectValue placeholder="What kind of property you have?" />
+        <SelectValue placeholder="Residential or Commercial?" />
       </SelectTrigger>
       <SelectContent>
         <SelectItem value="residential">Residential</SelectItem>

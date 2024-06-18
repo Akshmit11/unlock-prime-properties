@@ -8,9 +8,9 @@ import React from "react";
 const CreatePropertyPage = async () => {
     const { userId } = auth();
     if (!userId) redirect("/sign-in");
-    const user = await getUserById(userId);
+    // const user = await getUserById(userId);
 
-  //   const planBought = user?.planBought;
+    // const planBought = user?.planBought;
 
   return (
     <>

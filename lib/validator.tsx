@@ -36,25 +36,5 @@ export const propertyFormSchema = z.object({
     errorMap: () => ({ message: "Invalid property type" }),
   }),
   description: z.string().min(2, { message: "Description is required" }),
-  features: z.array(z.string()).optional(),
   sellerPhone: z.string().length(10, { message: "Seller phone is required" }),
-  active: z.boolean().default(true),
-}).refine((data) => {
-    if (
-      ["plot/land", "industry", "storage", "hospital"].includes(data.propertyType)
-    ) {
-      return !!data.size;
-    }
-    return true;
-  }, {
-    message: "Size is required for plot/land, industry, storage, hospital",
-    path: ["size"],
-  }).refine((data) => {
-    if (["flat", "house", "office"].includes(data.propertyType)) {
-      return !!data.builtupArea && !!data.carpetArea;
-    }
-    return true;
-  }, {
-    message: "Builtup area and carpet area are required for flat, house, office",
-    path: ["builtupArea", "carpetArea"],
-  });
+});

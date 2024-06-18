@@ -29,9 +29,7 @@ export interface IProperty extends Document {
     | "hospital"
     | "other";
   description: string;
-  features?: string[];
   sellerPhone: string;
-  active: boolean;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -69,9 +67,7 @@ const PropertySchema: Schema<IProperty> = new Schema({
     ],
   },
   description: { type: String, required: true },
-  features: { type: [String] },
   sellerPhone: { type: String, required: true },
-  active: { type: Boolean, default: true },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },
 });
