@@ -53,9 +53,9 @@ const MobileNav = () => {
           </ul>
           <Separator className="border border-gray-50" />
           <div className="md:hidden w-fit">
-            <Button asChild className="flex md:hidden gap-2 text-black">
-              <Link href={"/properties/create"}>
-                <Plus className="w-5 h-5" color="black" />
+            <Button asChild className="flex md:hidden gap-2 text-white">
+              <Link href={"/property/create"}>
+                <Plus className="w-5 h-5" color="white" />
                 Post Your Property
               </Link>
             </Button>

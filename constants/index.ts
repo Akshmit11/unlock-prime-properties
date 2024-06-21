@@ -2,8 +2,8 @@ import { z } from "zod";
 
 export const headerLinks = [
   {
-    label: "For Sale",
-    route: "/for-sale",
+    label: "All Properties",
+    route: "/all-properties",
   },
   {
     label: "Agent Finder",

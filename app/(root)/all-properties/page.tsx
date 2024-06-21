@@ -3,11 +3,11 @@ import PropertyFilter from "@/components/shared/PropertyFilter"
 import PropertyFilterMobile from "@/components/shared/PropertyFilterMobile"
 import SearchComponent from "@/components/shared/SearchComponent"
 
-const PrimeProperties = () => {
+const AllProperties = () => {
   return (
     <div className='w-full flex flex-col'>
       <h1 className="text-3xl font-bold">
-        Prime Property Listing
+        Property Listing
       </h1>
       <div className="flex flex-col mt-8">
         <div>
@@ -24,7 +24,7 @@ const PrimeProperties = () => {
             emptySubtitle="Come back later..."
             page={1}
             limit={8}
-            collectionType="Prime_Properties"
+            collectionType="All_Properties"
           />
         </div>
       </div>
@@ -32,4 +32,4 @@ const PrimeProperties = () => {
   )
 }
 
-export default PrimeProperties
+export default AllProperties

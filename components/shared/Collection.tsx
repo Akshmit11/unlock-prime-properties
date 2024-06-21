@@ -13,7 +13,8 @@ type CollectionProps = {
   collectionType:
     | "All_Properties"
     | "My_Properties"
-    | "Prime_Properties";
+    | "Prime_Properties"
+    | "Agent_Properties";
 };
 
 const Collection = ({

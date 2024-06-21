@@ -14,17 +14,20 @@ const PropertyCard = ({
   currentUserId,
 }: PropertyCardProps) => {
   return (
-    <div className="border border-gray-300 rounded-lg transition-all hover:shadow-xl hover:-m-2 h-80 flex flex-col">
-      <Link href={`/properties/${property}`} className="h-full rounded-lg">
+    <div className="border border-gray-300 rounded-lg transition-all hover:shadow-xl hover:-m-2 flex flex-col max-h-96">
+      <Link href={`/property/${property}`} className="h-full rounded-lg">
         <div className="p-1 relative bg-[url('/assets/hero-img.webp')] bg-cover bg-center h-48 rounded-t-lg">
-          <span className="mx-2 py-1 px-3 rounded-full text-xs text-white bg-primary">
-            Featured
-          </span>
-          <span className="py-1 px-3 rounded-full text-xs text-white bg-gray-400 ">
-            For Sale
-          </span>
-          <p className="absolute flex items-center gap-2 bottom-2 left-4 line-clamp-1 text-white">
-            <MapPin className="w-4 h-4" /> A-70 Amra Vihar Lalita Nagar
+          <div className="w-full h-full absolute top-0 left-0 bottom-0 bg-black opacity-30 rounded-t-lg"/>
+          <div className="absolute top-2 z-20">
+            <span className="mx-2 py-1 px-3 rounded-full text-xs text-white bg-primary z-20">
+              Featured
+            </span>
+            <span className="py-1 px-3 rounded-full text-xs text-white bg-gray-400">
+              For Sale
+            </span>
+          </div>
+          <p className="absolute flex items-center gap-2 bottom-2 left-4 z-30 line-clamp-1 text-white">
+            <MapPin className="w-4 h-4 font-extrabold" /> A-70 Amra Vihar Lalita Nagar
           </p>
         </div>
         <div className="p-3 px-5">
